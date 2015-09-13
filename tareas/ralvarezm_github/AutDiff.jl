@@ -40,7 +40,7 @@ import Base.^
 
 import Base.abs
 
-abs(x::Dual)=Dual(abs(x.f),x.f*(sign(x.f)/sign(x.f)))
+abs(x::Dual)=Dual(abs(x.f),x.f*(sign(x.f)/sign(x.f)))  #Gracias al pull request de Ceboc pude corregir este error.
 
 import Base.sin
 sin(x::Dual)=Dual(sin(x.f),cos(x.f)*x.fp)
